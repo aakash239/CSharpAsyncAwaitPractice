@@ -6,13 +6,14 @@
         {
             Console.WriteLine("Before method call");
             
-            Task<int> task1 = GetLuckyNumberAsync("task1", 2000);
-            Task<int> task2 = GetLuckyNumberAsync("task2", 4000);
+            Task<int> task1 = GetLuckyNumberAsync("task1", 4000);
+            Task<int> task2 = GetLuckyNumberAsync("task2", 2000);
 
             Console.WriteLine("After method call");
             
-            int result2 = await task2;
-            int result1 = await task1;
+            int[] results = await Task.WhenAll(task1, task2);
+            int result2 = results[1];
+            int result1 = results[0];
 
             Console.WriteLine("After await !");
             Console.WriteLine($"result1: {result1}");
