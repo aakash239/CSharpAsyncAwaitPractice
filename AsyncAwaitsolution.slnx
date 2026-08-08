@@ -1,5 +1,6 @@
 <Solution>
   <Project Path="AsyncAwatiBasics/AsyncAwatiBasics.csproj" />
   <Project Path="AsyncBreakfast/AsyncBreakfast.csproj" />
+  <Project Path="CancellationAsyncAwait/CancellationAsyncAwait.csproj" />
   <Project Path="ExceptionsInAsync/ExceptionsInAsync.csproj" />
 </Solution>
